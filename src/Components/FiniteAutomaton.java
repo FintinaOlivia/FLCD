@@ -23,7 +23,7 @@ public class FiniteAutomaton {
     }
 
     private void readFromFile(String filePath) {
-        int lineNumber = 0;
+        int lineNumber = 1;
         boolean isTransition = false;
 
         try (Scanner scanner = new Scanner(new File(filePath))) {
@@ -106,7 +106,7 @@ public class FiniteAutomaton {
 
     public boolean checkWordIfIntegerConstant(String word) {
         String state = this.initialState;
-        List<String> desiredFinalStates = Arrays.asList("q4", "q5");
+        List<String> desiredFinalStates = Arrays.asList("q3", "q4");
 
         return checkSequence(state, word, desiredFinalStates);
     }
